@@ -11,8 +11,9 @@ weights/
 # Dataset folders
 data/
 *.zip
-CVDL/*_image/
-CVDL_hw2/data/
+*_Image/
+*_image/
+*_images/
 
 # Model weights
 *.pth
@@ -22,3 +23,6 @@ CVDL_hw2/data/
 # OS files
 .DS_Store
 Thumbs.db
+
+# Temporary files
+tempCodeRunnerFile.py
