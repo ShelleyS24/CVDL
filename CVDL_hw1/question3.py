@@ -27,18 +27,20 @@ def disparityMap(self):
             if event == cv2.EVENT_LBUTTONDOWN:
                 imgR_cp = imgRight.copy()
                 imgL_cp = imgLeft.copy()
-                if disparity[y, x] != 0:
+                disp = int(disparity[y, x])
+
+                if disp != 0:
                     cv2.circle(
                         imgR_cp,
-                        (x - disparity[y, x] - 50, y),
+                        (x - disp - 50, y),
                         24,
                         (255, 255, 0),
                         thickness=-1,
                     )
-                    print("disparity: {}".format(disparity[y, x]))
+                    print("disparity: {}".format(disp))
                     print(
                         "depth: {}".format(
-                            int(342.789 * 4019.284 / (279.184 + disparity[y, x]))
+                            int(342.789 * 4019.284 / (279.184 + disp))
                         )
                     )
                     cv2.imshow("imgRight", imgR_cp)

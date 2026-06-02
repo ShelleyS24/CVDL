@@ -1,0 +1,24 @@
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+weights/
+
+# IDE
+.vscode/
+
+# Dataset folders
+data/
+*.zip
+CVDL/*_image/
+CVDL_hw2/data/
+
+# Model weights
+*.pth
+*.pt
+*.ckpt
+
+# OS files
+.DS_Store
+Thumbs.db

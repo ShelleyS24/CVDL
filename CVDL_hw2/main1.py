@@ -10,7 +10,7 @@ class MainWindow(MainWindowLayout):
         super().__init__()
 
         # 參數
-        self.image_path_Q1_1 = "Q1_image\Q1_1"
+        self.image_path_Q1_1 = r"Q1_image\Q1_1"
         self.training_validation_metrics = "training_validation_metrics.png"
         self.image_path_Q1_4 = None
 

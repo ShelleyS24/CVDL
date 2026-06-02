@@ -84,7 +84,9 @@ def inference_and_show(image_path, result_label):
 
         # 模型推論
         model = VGG19_BN(num_classes=10)
-        model.load_state_dict(torch.load('best_vgg19_bn.pth'))
+        model.load_state_dict(
+            torch.load("best_vgg19_bn.pth", map_location=torch.device("cpu"))
+        )
         model.eval()
         with torch.no_grad():
             output = model(image)
